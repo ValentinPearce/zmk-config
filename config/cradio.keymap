@@ -101,10 +101,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-        &kp FR_PRCNT &kp FR_CARET  &kp FR_DLLR   &kp FR_EURO   &kb FR_UMLAUT         &kp FR_QMARK &kp FR_LBRC   &kp FR_RBRC   &kp FR_AT   &kp FR_HASH
+        &kp FR_PRCNT &kp FR_CARET  &kp FR_DLLR   &kp FR_EURO   &kp FR_UMLAUT         &kp FR_QMARK &kp FR_LBRC   &kp FR_RBRC   &kp FR_AT   &kp FR_HASH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-        &kp FR_FSLSH   &kp FR_STAR     &kp FR_MINUS   &kp FR_PLUS   &kp FR_BSLSH      &trans  &kp FR_LPAR  &kp FR_RPAR  &kp FR_SQT   &kp FR_DQT
+        &kp FR_FSLH   &kp FR_STAR     &kp FR_MINUS   &kp FR_PLUS   &kp FR_BSLH      &trans  &kp FR_LPAR  &kp FR_RPAR  &kp FR_SQT   &kp FR_DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
           &kp FR_PIPE  &kp FR_AMPS  &kp FR_EXCL &kp FR_EQUAL  &kp FR_LT            &kp FR_GT   &kp FR_LBKT  &kp FR_RBKT   &kp FR_TILDE   &kp FR_GRAVE
