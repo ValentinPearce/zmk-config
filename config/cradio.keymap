@@ -30,7 +30,14 @@
             bindings = <&kp FR_Q>, <&kp ESC>;
         };
     };
-
+   combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <13 16>;
+            bindings = <&caps_word>;
+        };
+    };
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -94,15 +101,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        &kp FR_PRCNT &kp FR_CARET  &kp FR_DLLR   &kp FR_EURO   &kb FR_UMLAUT         &kp FR_QMARK &kp FR_LBRC   &kp FR_RBRC   &kp FR_AT   &kp FR_HASH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        &kp FR_FSLSH   &kp FR_STAR     &kp FR_MINUS   &kp FR_PLUS   &kp FR_BSLSH      &trans  &kp FR_LPAR  &kp FR_RPAR  &kp FR_SQT   &kp FR_DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+          &kp FR_PIPE  &kp FR_AMPS  &kp FR_EXCL &kp FR_EQUAL  &kp FR_LT            &kp FR_GT   &kp FR_LBKT  &kp FR_RBKT   &kp FR_TILDE   &kp FR_GRAVE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &kp FR_UNDER         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
