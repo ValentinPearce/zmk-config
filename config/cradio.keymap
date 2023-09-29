@@ -159,13 +159,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans    &trans           &td1     &kp_n7     &kp_n8     &kp_n9      &trans
+            &trans     &trans     &trans     &trans    &trans           &td1     &kp kp_n7     &kp kp_n8     &kp kp_n9      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans    &trans           &trans     &kp_n4     &kp_n5     &kp_n6    &trans
+            &trans     &trans     &trans     &trans    &trans           &trans     &kp kp_n4     &kp kp_n5     &kp kp_n6    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &trans      &trans          &kp_n0     &kp_n1     &kp_n2     &kp_n3     &trans
+            &trans     &trans     &trans    &trans      &trans          &kp kp_n0     &kp kp_n1     &kp kp_n2     &kp kp_n3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
