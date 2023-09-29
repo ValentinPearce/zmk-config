@@ -29,6 +29,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp FR_Q>, <&kp ESC>;
         };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_J>, <&tog 6>;
+        };
+
     };
    combos {
         compatible = "zmk,combos";
@@ -52,7 +60,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ;       │
-            &td0       &kp FR_W  &kp FR_F    &kp FR_P   &kp FR_B      &kp FR_J   &kp FR_L   &kp FR_U   &kp FR_Y   &kp FR_SEMI
+            &td0       &kp FR_W  &kp FR_F    &kp FR_P   &kp FR_B      &td1       &kp FR_L   &kp FR_U   &kp FR_Y   &kp FR_SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
             HRML(FR_A,  FR_R,         FR_S,    FR_T)     &kp FR_G     &kp FR_M  HRMR(FR_N,     FR_E,      FR_I,        FR_O)
@@ -142,6 +150,22 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+         qud_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans    &trans           &td1     &kp_n7     &kp_n8     &kp_n9      &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans    &trans           &trans     &kp_n4     &kp_n5     &kp_n6    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
+            &trans     &trans     &trans    &trans      &trans          &kp_n0     &kp_n1     &kp_n2     &kp_n3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
