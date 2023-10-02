@@ -159,13 +159,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans    &trans           &td1     &kp KP_N7     &kp KP_N8     &kp KP_N9      &trans
+            &td0       &kp FR_W  &kp FR_F    &kp FR_P   &kp FR_B          &td1     &kp KP_N7     &kp KP_N8     &kp KP_N9      &kp LNLCK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans    &trans           &trans     &kp KP_N4     &kp KP_N5     &kp KP_N6    &trans
+            &kp FR_A   &kp FR_R   &kp FR_S  &kp FR_T     &kp FR_G          &trans     &kp KP_N4     &kp KP_N5     &kp KP_N6    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &trans      &trans          &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &trans
+            &kp FR_Z  &kp FR_X     &kp FR_C   &kp FR_D   &kp FR_V         &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
