@@ -167,7 +167,7 @@
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &kp FR_Z  &kp FR_X     &kp FR_C   &kp FR_D   &kp FR_V         &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &kp SPACE         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
