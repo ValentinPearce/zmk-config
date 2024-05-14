@@ -126,13 +126,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │  │          │          │          │          │          │
-            &kp ESC    &kp F7      &kp F8     &kp F9    &kp F12         &trans     &trans     &trans     &trans      &trans
+            &kp ESC    &kp F7      &kp F8     &kp F9    &kp F12         &kp C_MUTE     &kp C_VOL_UP     &trans     &trans      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │  │          │          │          │          │          │
-            &trans    &kp F4      &kp F5      &kp F6    &kp F11         &trans     &trans     &trans     &trans    &trans
+            &trans    &kp F4      &kp F5      &kp F6    &kp F11         &kp C_PREV     &kp C_PP     &kp C_NEXT &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │  │          │          │          │          │          │
-           &trans     &kp F1      &kp F2     &kp F3     &kp F10         &trans     &trans     &trans     &trans     &trans
+           &trans     &kp F1      &kp F2     &kp F3     &kp F10         &trans     &kp C_VOL_DN     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤  ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯  ╰──────────┴──────────╯
