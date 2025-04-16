@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
 #include "keys_fr_canadian_standard.h"
 
 // Home row mods macro
@@ -58,6 +59,10 @@
         tri_layer {
             if-layers = <2 4>;
             then-layer = <5>;
+        };
+        mouse_layer {
+            if-layers = <2 1>;
+            then-layer = <7>;
         };
     };
 
@@ -175,6 +180,22 @@
             &kp FR_Z  &kp FR_X     &kp FR_C   &kp FR_D   &kp FR_V         &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp SPACE         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        mouse_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans    &trans          &msc SCRL_UP     &trans     &mmv MOVE_UP     &trans      &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+          &trans       &trans     &trans     &trans    &trans          &msc SCRL_DOWN     &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_RIGHT    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans    &trans     &trans          &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &mkp MB1     &mkp MB2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
