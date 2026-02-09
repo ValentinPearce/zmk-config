@@ -17,3 +17,5 @@ include:
     shield: cradio_left
   - board: nice_nano@2
     shield: cradio_right
+  - board: nice_nano@2
+    shield: settings_reset
