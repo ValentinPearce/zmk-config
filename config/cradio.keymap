@@ -53,6 +53,11 @@
             key-positions = <13 16>;
             bindings = <&caps_word>;
         };
+        combo_one_hand {
+            timeout-ms = <50>;
+            key-positions = <0 1 2 3>;
+            bindings = <&tog 7>;
+        };
     };
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -176,6 +181,59 @@
             &kp FR_Z  &kp FR_X     &kp FR_C   &kp FR_D   &kp FR_V         &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp SPACE         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        one_hand_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  F       │  P       │  B       │   │          │          │          │          │          │
+            &kp FR_Q   &kp FR_W   &kp FR_F   &kp FR_P   &kp FR_B       &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  R       │  S       │  T       │  G       │   │          │          │          │          │          │
+            &kp FR_A   &kp FR_R   &kp FR_S   &kp FR_T   &kp FR_G       &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C       │  D       │  V       │   │          │          │          │          │          │
+            &kp FR_Z   &kp FR_X   &kp FR_C   &kp FR_D   &kp FR_V       &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                     mirror(one-shot) │  SPACE   │              (unused - right half not reachable)
+                                             &sl 8      &kp SPACE      &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        one_hand_mirror_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  ;       │  Y       │  U       │  L       │  J       │   │          │          │          │          │          │
+            &kp FR_SEMI &kp FR_Y &kp FR_U   &kp FR_L   &kp FR_J       &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  O       │  I       │  E       │  N       │  M       │   │          │          │          │          │          │
+            &kp FR_O   &kp FR_I   &kp FR_E   &kp FR_N   &kp FR_M       &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  /       │  .       │  ,       │  H       │  K       │   │          │          │          │          │          │
+            &kp FR_FSLH &kp FR_DOT &kp FR_COMMA &kp FR_H &kp FR_K     &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                    mods(one-shot,double-tap) │  ENTER   │              (unused - right half not reachable)
+                                             &sl 9      &kp ENTER      &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        one_hand_mod_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │ ALT GR   │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &sk RALT      &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  GUI     │  ALT     │  CTRL    │  SHIFT   │          │   │          │          │          │          │          │
+            &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT  &trans        &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &kb BSPC      &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
